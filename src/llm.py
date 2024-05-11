@@ -17,17 +17,17 @@ def ask_bot(user_message,instruction):
     model = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)
     
     
-    respones=model(
+    response=model(
     [
         SystemMessage(content=instruction),
         HumanMessage(content=user_message),
     ]
 )
     
-    return respones.content
+    return response.content
 
 if __name__=="__main__":
     user_message = "hi who are you?"
-    responses=ask_bot(user_message,instruction)
+    response=ask_bot(user_message,instruction)
 
-    print(responses)
+    print(response)
