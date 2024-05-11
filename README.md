@@ -3,3 +3,6 @@
 '''
 pip install chainlit
 '''
+'''
+chainlit hello
+'''
